@@ -30,3 +30,4 @@ _ReSharper*/
 */output/*
 packages/*
 IComWithEmbeddedTypeLib/IComWithEmbeddedTypeLib_h.h
+*.opendb
