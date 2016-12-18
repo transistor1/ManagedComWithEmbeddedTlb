@@ -1,0 +1,27 @@
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	uuid(BE93394A-13E8-4D50-BCC7-962EAFEB1B38)
+	, helpstring("Example managed COM object with embedded type library")
+]
+library ComLib
+{
+	[
+		uuid(9CAACBED-182C-453F-A99C-43F3F9EE1B57)
+	]
+	dispinterface IComWithEmbeddedTypeLib
+	{
+		properties:
+		methods:
+		[id(0x01)]
+		BSTR HelloWorld(BSTR name);
+	};
+
+	[dllname("ComWithEmbeddedTypeLib")]
+	module StaticModule
+	{
+		[entry("CreateObject")]
+		IComWithEmbeddedTypeLib* CreateObject();
+	}
+}
