@@ -2,6 +2,8 @@
 
 Writing managed code to distribute with Microsoft Office applications is difficult.  This project aims to produce an example that will make such an endeavor easier.
 
+Another feature of this project is that it contains a static method to instantiate the object.  This makes it easier to use with VBA, because the COM will not need to be registered with the operating system in order to be used.  It also will not require a SxS manifest, used with an .EXE, which is also problematic for non-administrative users since the manifest would need to live either embedded in the EXE itself, or in the same folder as the Office executable.
+
 ## Steps for Visual Studio 2015:
 
 1. Create a blank solution
