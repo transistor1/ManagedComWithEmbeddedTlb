@@ -1,4 +1,4 @@
-# Building a Managed COM Object With an Embedded Type Library
+# Building a Managed COM Class With an Embedded Type Library
 
 Writing managed code to distribute with Microsoft Office applications is difficult.  This project aims to produce an example that will make such an endeavor easier.
 
