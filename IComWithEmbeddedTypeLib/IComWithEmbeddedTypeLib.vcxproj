@@ -97,7 +97,7 @@
       <SubSystem>Windows</SubSystem>
     </Link>
     <PostBuildEvent>
-      <Command>tlbimp "$(IntDir)$(AssemblyName).tlb" /out:"$(IntDir)$(AssemblyName).dll" /namespace:ComLib</Command>
+      <Command>tlbimp "$(IntDir)$(ProjectName).tlb" /out:"$(IntDir)$(ProjectName).dll" /namespace:ComLib</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -112,7 +112,7 @@
       <SubSystem>Windows</SubSystem>
     </Link>
     <PostBuildEvent>
-      <Command>tlbimp "$(IntDir)$(AssemblyName).tlb" /out:"$(IntDir)$(AssemblyName).dll" /namespace:ComLib</Command>
+      <Command>tlbimp "$(IntDir)$(ProjectName).tlb" /out:"$(IntDir)$(ProjectName).dll" /namespace:ComLib</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -131,7 +131,7 @@
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
     <PostBuildEvent>
-      <Command>tlbimp "$(IntDir)$(AssemblyName).tlb" /out:"$(IntDir)$(AssemblyName).dll" /namespace:ComLib</Command>
+      <Command>tlbimp "$(IntDir)$(ProjectName).tlb" /out:"$(IntDir)$(ProjectName).dll" /namespace:ComLib</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -150,7 +150,7 @@
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
     <PostBuildEvent>
-      <Command>tlbimp "$(IntDir)$(AssemblyName).tlb" /out:"$(IntDir)$(AssemblyName).dll" /namespace:ComLib</Command>
+      <Command>tlbimp "$(IntDir)$(ProjectName).tlb" /out:"$(IntDir)$(ProjectName).dll" /namespace:ComLib</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>

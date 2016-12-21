@@ -13,7 +13,7 @@ Another feature of this project is that it contains a static method to instantia
       1. In General settings, set both Output and Intermediate directories to ```$(ProjectDir)output\```
       2. In Build Events->Post Build Event, enter:
 	  ```
-		tlbimp "$(IntDir)$(AssemblyName).tlb" /out:"$(IntDir)$(AssemblyName).dll" /namespace:ComLib
+		tlbimp "$(IntDir)$(ProjectName).tlb" /out:"$(IntDir)$(ProjectName).dll" /namespace:ComLib
 	  ```
 	  Choose a namespace appropriate for your project.  ```tlbimp``` will generate a managed DLL based on the .tlb file created by the .idl
 3. Add a new blank .idl file to the project.  We will use this file to define the COM object's interface, and we'll also use it to define the managed object's interface.
