@@ -49,8 +49,8 @@ Public Property Get ThisFolder(ParamArray additionalPaths())
     Next
 End Property
 
-Public Property Get ComObj() As ComLib.IComWithEmbeddedTypeLib
-    Static comLib__ As ComLib.IComWithEmbeddedTypeLib
+Public Property Get ComObj() 'As ComLib.IComWithEmbeddedTypeLib
+    Static comLib__ As Object 'As ComLib.IComWithEmbeddedTypeLib
     If comLib__ Is Nothing Then
         Dim libPath As String
         Dim result As Long
