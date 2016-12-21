@@ -1,5 +1,4 @@
 Attribute VB_Name = "SampleActivation"
-Option Compare Database
 
 'https://github.com/transistor1/ManagedComWithEmbeddedTlb
 
