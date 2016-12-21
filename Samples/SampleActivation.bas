@@ -1,5 +1,4 @@
 Attribute VB_Name = "SampleActivation"
-
 'https://github.com/transistor1/ManagedComWithEmbeddedTlb
 
 'This is a sample module that can be imported into a VBA project
@@ -33,7 +32,17 @@ End Function
 Public Property Get ThisFolder(ParamArray additionalPaths())
     Dim fs__
     Set fs__ = CreateObject("Scripting.FileSystemObject")
-    ThisFolder = fs__.GetParentFolderName(CurrentDb().Name)
+    
+    'Find the current path in the Big 4
+    If Not IsEmpty(ThisWorkbook) Then
+        ThisFolder = fs__.GetParentFolderName(ThisWorkbook.FullName)
+    ElseIf Not IsEmpty(ThisDocument) Then
+        ThisFolder = fs__.GetParentFolderName(ThisDocument.FullName)
+    ElseIf Not IsEmpty(CurrentProject) Then
+        ThisFolder = fs__.GetParentFolderName(CurrentProject.FullName)
+    ElseIf Not IsEmpty(ActivePresentation) Then
+        ThisFolder = fs__.GetParentFolderName(ActivePresentation.FullName)
+    End If
     
     For Each curPath In additionalPaths
         ThisFolder = fs__.BuildPath(ThisFolder, curPath)
