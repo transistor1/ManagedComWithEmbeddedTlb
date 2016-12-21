@@ -52,7 +52,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="IComWithEmbeddedTypeLib">
-      <HintPath>C:\Users\russosv\Documents\Visual Studio 2015\Projects\ComWithEmbeddedTypeLib\IComWithEmbeddedTypeLib\output\IComWithEmbeddedTypeLib.dll</HintPath>
+      <HintPath>..\IComWithEmbeddedTypeLib\output\IComWithEmbeddedTypeLib.dll</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="RGiesecke.DllExport.Metadata, Version=1.0.0.0, Culture=neutral, PublicKeyToken=8f52d83c1a22df51, processorArchitecture=MSIL">
