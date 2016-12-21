@@ -31,3 +31,5 @@ _ReSharper*/
 packages/*
 IComWithEmbeddedTypeLib/IComWithEmbeddedTypeLib_h.h
 *.opendb
+*.db
+*.dll
